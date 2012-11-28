@@ -1,6 +1,6 @@
 # storytelling-compare-map-template-js
 
-A storytelling template that compares up to three web maps from ArcGIS Online. Users can sync maps by scale, location, or scale and location.
+A storytelling template that compares up to three webmaps from ArcGIS Online. Users can sync maps by scale, location, or scale and location.
 
 This template is part of the ArcGIS.com template gallery. These templates can be accessed from the ArcGIS.com map viewer Share window or from the Web Application Templates group. When accessed from the map viewer the templates can be published as a hosted application or you can download the template ZIP file to install on your web server.
 
@@ -35,7 +35,7 @@ Now let's configure the application to use a different ArcGIS Online group, titl
 2. Open the index.html file in a text editor. You can edit this file to set the following application properties:
     - **webmaps**: unique identifier for the ArcGIS Online map - supports two or three maps.
     - **title**: if not specified the ArcGIS.com map's title is used.
-    - **subtitle**: if not specified the ArcGIS.com web map's summary is used.
+    - **subtitle**: if not specified the ArcGIS.com webmap's summary is used.
     - **bingMapsKey**: if the map uses data from Bing Maps, enter your Bing Maps Key.
     - **legend**: Choose if legend is displayed with map.
     - **description**: Choose if description is displayed with map.
