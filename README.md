@@ -1,4 +1,4 @@
-# storytelling-compare-map-template-js
+# compare-map-storytelling-template-js
 
 A storytelling template that compares up to three webmaps from ArcGIS Online. Users can sync maps by scale, location, or scale and location.
 
@@ -6,7 +6,7 @@ This template is part of the ArcGIS.com template gallery. These templates can be
 
 [View live app here](http://storymaps.esri.com/templates/compare/)
 
-![App](https://raw.github.com/Esri/storytelling-compare-map-template-js/master/images/storytelling-compare-map-template-js.png)
+![App](https://raw.github.com/Esri/compare-map-storytelling-template-js/master/images/storytelling-compare-map-template-js.png)
 
 ## Features
 * Compare two or three webmaps side-by-side.
@@ -90,4 +90,4 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-A copy of the license is available in the repository's [license.txt](https://raw.github.com/Esri/storytelling-compare-map-template-js/master/license.txt) file.
+A copy of the license is available in the repository's [license.txt](https://raw.github.com/Esri/compare-map-storytelling-template-js/master/license.txt) file.
