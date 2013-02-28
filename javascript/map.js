@@ -140,12 +140,13 @@
 
     function createMap(j){
 
-	  esriConfig.defaults.map.slider = { left:200 };
+	  //esriConfig.defaults.map.slider = { left:200 };
 
 
       var mapDeferred = esri.arcgis.utils.createMap(configOptions.webmaps[j].id, "mapDiv"+[j], {
         mapOptions: {
           slider: true,
+          sliderPosition: "top-right",
           nav: false,
           wrapAround180: true,
 		  extent: mapExtent
@@ -169,14 +170,10 @@
         var layers = response.itemInfo.itemData.operationalLayers;
         if(eval("map"+[j]).loaded){
           initUI(layers,j);
-		  $(".esriSimpleSlider").css("left",($(".map").width()-42));
-		  $("#mapDiv1_zoom_slider").css("left",($("#mapDiv1").width()-42));
         }
         else{
           dojo.connect(eval("map"+[j]),"onLoad",function(){
             initUI(layers,j);
-			$(".esriSimpleSlider").css("left",($(".map").width()-42));
-			$("#mapDiv1_zoom_slider").css("left",($("#mapDiv1").width()-42));
           });
         }
        });
@@ -327,8 +324,6 @@
 		else{
 			mapsLoaded++
 		}
-		$(".esriSimpleSlider").css("left",($(".map").width()-42));
-		$("#mapDiv1_zoom_slider").css("left",($("#mapDiv1").width()-42));
 	}
 
 	function resizeMaps(){

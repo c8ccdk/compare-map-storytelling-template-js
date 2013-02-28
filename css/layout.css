@@ -343,3 +343,7 @@
       .esriRtl #controls{
       padding-right:25px;
       }
+
+      .maximize{
+      	display:none;
+      }
