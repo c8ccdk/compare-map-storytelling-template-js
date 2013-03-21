@@ -90,18 +90,7 @@
         configOptions.legend = urlObject.query.legend;
       }
       if(urlObject.query.webmap){
-        if (dojo.isArray(urlObject.query.webmap) == false && getWebMaps(urlObject.query.webmap).length > 1){
-            configOptions.webmaps = getWebMaps(urlObject.query.webmap);
-        }
-        else if (dojo.isArray(urlObject.query.webmap) == false){
-            configOptions.webmaps[0].id = urlObject.query.webmap;
-    		configOptions.webmaps[1].id = urlObject.query.webmap;
-		}
-		  else{
-			dojo.forEach(urlObject.query.webmap,function(webmap,i){
-			  configOptions.webmaps[i] = {"id": webmap};
-			});
-		  }
+        configOptions.webmaps = getWebMaps(urlObject.query.webmap);
       }
       if(urlObject.query.bingMapsKey){
         configOptions.bingmapskey = urlObject.query.bingMapsKey;
@@ -119,8 +108,7 @@
 			   if(response.values.subtitle !== undefined){configOptions.subtitle = response.values.subtitle;}
 			   if(response.values.description !== undefined){configOptions.description = response.values.description; }
 			   if(response.values.legend !== undefined) {configOptions.legend = response.values.legend;}
-			   if(response.values.webmaps !== undefined) {configOptions.webmaps = getWebMaps(response.values.webmaps);}
-               if(response.values.webmap !== undefined) {configOptions.webmaps = getWebMaps(response.values.webmap);}
+			   if(response.values.webmap !== undefined) {configOptions.webmaps = getWebMaps(response.values.webmap);}
 
 			   initMaps();
 	  		   bannerSetup();
