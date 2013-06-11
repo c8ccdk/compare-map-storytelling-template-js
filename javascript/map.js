@@ -10,6 +10,8 @@ var mapChange = false;
 var mapExtent;
 var firstMap = false;
 var mapsLoaded = 1;
+var urlObject;
+var embed;
 
 
 function initMap(options) {
@@ -62,7 +64,11 @@ function initMap(options) {
 function createMap(j) {
 
     //esriConfig.defaults.map.slider = { left:200 };
-
+    if(embed === "true" || $("#mainWindow").width() < 768 && embed != "false"){
+      $("#banner").hide();
+      $("#header").css("height",70);
+      dijit.byId("mainWindow").layout();
+    }
 
     var mapDeferred = esri.arcgis.utils.createMap(configOptions.webmaps[j].id, "mapDiv" + [j], {
         mapOptions: {
