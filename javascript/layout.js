@@ -155,7 +155,7 @@
 		sync = false;
 		if ($(".legendCon").is(':visible')){
 			$(".legendCon").hide();
-			$(".legToggle").html(i18n.viewer.toggles.legend+' ▼');
+			$(".legToggle").html(configOptions.i18n.viewer.toggles.legend+' ▼');
 			if ($(".descriptionCon").is(':visible')){
 				$(".map").css('height','75%');
 			}
@@ -166,7 +166,7 @@
 		}
 		else{
 			$(".legendCon").show();
-			$(".legToggle").html(i18n.viewer.toggles.legend+' ▲');
+			$(".legToggle").html(configOptions.i18n.viewer.toggles.legend+' ▲');
 			if ($(".descriptionCon").is(':visible')){
 				$(".map").css('height','40%');
 			}
@@ -181,7 +181,7 @@
 		sync = false;
 		if ($(".descriptionCon").is(':visible')){
 			$(".descriptionCon").hide();
-			$(".desToggle").html(i18n.viewer.toggles.description+' ▲');
+			$(".desToggle").html(configOptions.i18n.viewer.toggles.description+' ▲');
 			$(".desToggle").css('bottom','0%');
 			if ($(".legendCon").is(':visible')){
 				$(".map").css('height','65%');
@@ -193,7 +193,7 @@
 		}
 		else{
 			$(".descriptionCon").show();
-			$(".desToggle").html(i18n.viewer.toggles.description+' ▼');
+			$(".desToggle").html(configOptions.i18n.viewer.toggles.description+' ▼');
 			$(".desToggle").css('bottom','25%');
 			if ($(".legendCon").is(':visible')){
 				$(".map").css('height','40%');
