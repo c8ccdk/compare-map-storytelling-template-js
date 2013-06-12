@@ -51,7 +51,14 @@ function initMap(options) {
     dojo.byId('legText').innerHTML = configOptions.i18n.viewer.toggles.legend;
     dojo.byId('desText').innerHTML = configOptions.i18n.viewer.toggles.description;
 
+    urlObject = esri.urlToObject(document.location.href);
+    urlObject.query = urlObject.query || {};
 
+    if(urlObject.query.embed){
+      embed = urlObject.query.embed;
+    }
+
+    
     if(configOptions.webmap){
       configOptions.webmaps = getWebMaps(configOptions.webmap);
     }
