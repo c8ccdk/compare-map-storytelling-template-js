@@ -65,9 +65,11 @@ var App =  declare("utilities.App",null,{
           }
         }));
         var dirNode = document.getElementsByTagName("html")[0];
+        var classes = dirNode.className;
         if(this.config.i18n.isRightToLeft){
-              dirNode.setAttribute("dir","rtl");
-              domClass.add( dirNode,"esriRtl");
+            dirNode.setAttribute("dir","rtl");
+            var rtlClasses = " esriRTL dj_rtl dijitRtl " + classes.replace(/ /g, "-rtl ");
+            dirNode.className = lang.trim(classes + rtlClasses);
         }else{
           dirNode.setAttribute("dir","ltr");
           domClass.add(dirNode,"esriLtr");

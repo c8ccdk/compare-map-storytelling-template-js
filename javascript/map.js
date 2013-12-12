@@ -3,6 +3,7 @@ dojo.require("esri.layout");
 dojo.require("esri.widgets");
 dojo.require("esri.arcgis.utils");
 dojo.require("esri.IdentityManager");
+dojo.require("dojo.Deferred");
 
 
 
@@ -12,6 +13,7 @@ var firstMap = false;
 var mapsLoaded = 1;
 var urlObject;
 var embed;
+
 
 
 function initMap(options) {
@@ -63,7 +65,7 @@ function initMap(options) {
       configOptions.webmaps = getWebMaps(configOptions.webmap);
     }
     initMaps();
-    bannerSetup();
+    //bannerSetup();
 
 }
 
@@ -90,8 +92,11 @@ function createMap(j) {
     });
 
     mapDeferred.addCallback(function (response) {
-
+        //if no title is defined in the config use the web map's title instead. 
+        configOptions.title = configOptions.title || response.itemInfo.item.title || "";
+        configOptions.subtitle = configOptions.subtitle || response.itemInfo.item.snippet || "";
         dojo.byId("title" + [j]).innerHTML = response.itemInfo.item.title;
+
         dojo.byId("description" + [j]).innerHTML = response.itemInfo.item.description;
 
         eval("map" + [j] + " = response.map");
@@ -205,6 +210,7 @@ function setExtent() {
 }
 
 function hideLoader() {
+    bannerSetup();
     if (mapsLoaded == configOptions.webmaps.length) {
         $("#loadingCon").hide();
         syncMaps();
@@ -235,9 +241,10 @@ $(window).resize(function (e) {
 function getWebMaps(webmaps) {
     if (webmaps.indexOf(',') !== -1) {
         var mapIds = webmaps.split(',');
+        
         webmapresults = dojo.map(mapIds, function (mapId) {
             return {
-                id: mapId
+                id: dojo.string.trim(mapId)
             };
         });
     } else {

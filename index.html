@@ -5,8 +5,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=7, IE=9, IE=10">
 <title></title>
-<link rel="stylesheet" type="text/css" href="//serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/dojo/dijit/themes/tundra/tundra.css">
-<link rel="stylesheet" type="text/css" href="//serverapi.arcgisonline.com/jsapi/arcgis/3.5/js/esri/css/esri.css" />
+<link rel="stylesheet" type="text/css" href="//jsdev.arcgis.com/3.8/js/dojo/dijit/themes/tundra/tundra.css">
+<link rel="stylesheet" type="text/css" href="//jsdev.arcgis.com/3.8/js/esri/css/esri.css" />
 <link rel="stylesheet" type="text/css" href="css/layout.css" />
 <script type="text/javascript">
 var path_location = location.pathname.replace(/\/[^/]+$/, '');
@@ -25,8 +25,8 @@ var dojoConfig = {
     ]
 };
 </script>
-<script type="text/javascript" src="//serverapi.arcgisonline.com/jsapi/arcgis/3.5compact"></script>
-<script type="text/javascript" src="javascript/jquery-1.7.1.min.js">
+<script type="text/javascript" src="//jsdev.arcgis.com/3.8/"></script>
+<script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js">
 
 </script>
 <script type="text/javascript" src="javascript/map.js">
@@ -49,9 +49,9 @@ function init() {
             }
         ],
         //Enter a title, if no title is specified, the webmap's title is used.
-        title: "Comparing unemployment and population change reveals regional patterns",
+        title: "",
         //Enter a subtitle, if not specified the ArcGIS.com web map's summary is used
-        subtitle: "Despite recent signs of recovery, unemployment remains a major national issue. How do patterns of unemployment relate to regional changes in population?",
+        subtitle: "",
         //Display legend on map
         legend: true,
         //Display description on map
@@ -119,8 +119,8 @@ dojo.addOnLoad(init);
             <div id="legend0" class="legend" dir="ltr"></div>
         </div>
         <div id="mapDiv0" class="map">
-            <div id="legToggle0" class="legToggle" onClick="legendToggle()"><span id="legText"></span> &#9660;</div>
-            <div id="desToggle0" class="desToggle" onClick="descriptionToggle()"><span id="desText"></span> &#9660;</div>
+            <div id="legToggle0" class="legToggle" onClick="legendToggle()"><span id="legText"></span> ▼</div>
+            <div id="desToggle0" class="desToggle" onClick="descriptionToggle()"><span id="desText"></span> ▼</div>
         </div>
         <div id="discriptionCon0" class="descriptionCon">
             <div id="description0" class="description" dir="ltr"></div>
