@@ -145,7 +145,6 @@ function initUI(response, j) {
     } else {
         dojo.byId('legend' + [j]).innerHTML = 'No Legend';
     }
-    window.ld = legendDijit;
 
 }
 
