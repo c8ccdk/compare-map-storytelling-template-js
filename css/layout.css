@@ -347,3 +347,20 @@
       .maximize{
       	display:none;
       }
+
+.tundra .dijitSplitContainer-dijitContentPane, .tundra .dijitBorderContainer-dijitContentPane {
+    padding: 0px;
+}
+.tundra .dijitSplitContainer-child, .tundra .dijitBorderContainer-child {
+    border: none;
+}
+
+#banner{
+  background-color: #444 !important;
+}
+
+#mainWindow{
+  height:100%;
+  width:100%;
+  padding:0;
+}
