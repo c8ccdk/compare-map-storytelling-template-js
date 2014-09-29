@@ -59,6 +59,12 @@
 				}
 			});
 		}
+		
+		$("#syncScale").toggleClass('checked', syncLevel);
+		$("#syncLoc").toggleClass('checked', syncLoc);
+		
+		$("#syncScale").toggleClass('unchecked', ! syncLevel);
+		$("#syncLoc").toggleClass('unchecked', ! syncLoc);
 	}
 
 	function enableSyncing(){
