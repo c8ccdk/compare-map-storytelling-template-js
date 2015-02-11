@@ -1,7 +1,7 @@
 # compare-map-storytelling-template-js
 
 ### Deprecated App
-This application is no longer in active development. New users should looking to use the side accordion layout should use the [Compare Maps Template](https://github.com/Esri/Compare-Maps-Template).
+This application is no longer in active development. New users looking to using a compare layout should use the [Compare Maps Template](https://github.com/Esri/Compare-Maps-Template).
 
 A storytelling template that compares up to three webmaps from ArcGIS Online. Users can sync maps by scale, location, or scale and location.
 
